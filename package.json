@@ -1,0 +1,15 @@
+{
+  "name": "x-prompt-library",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A bilingual prompt library with 27 collections and 71 reusable prompts.",
+  "scripts": {
+    "dev": "python3 -m http.server 4312 --bind 127.0.0.1 --directory public",
+    "check": "node scripts/check.mjs",
+    "deploy:check": "npm run check && wrangler deploy --dry-run --config wrangler.jsonc",
+    "deploy": "npm run check && wrangler deploy --config wrangler.jsonc"
+  },
+  "devDependencies": {
+    "wrangler": "4.128.0"
+  }
+}
