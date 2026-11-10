@@ -1,0 +1,12 @@
+import {cpSync,existsSync} from 'node:fs';
+import {resolve,dirname} from 'node:path';
+import {fileURLToPath} from 'node:url';
+import {execFileSync} from 'node:child_process';
+const root=resolve(dirname(fileURLToPath(import.meta.url)),'..');
+const target=process.argv[2];if(!target)throw Error('Usage: npm run sync:portfolio -- /absolute/path/to/portfolio');
+const repo=resolve(target),git=(...args)=>execFileSync('git',['-C',repo,...args],{encoding:'utf8'}).trim();
+if(git('branch','--show-current')!=='master')throw Error('Portfolio must be on master');
+if(!/holynova\/holynova.github.io(?:\.git)?$/.test(git('remote','get-url','origin')))throw Error('Wrong portfolio repository');
+if(!existsSync(resolve(repo,'wrangler.jsonc')))throw Error('Missing portfolio Worker configuration');
+cpSync(resolve(root,'public'),resolve(repo,'x-prompt-library'),{recursive:true});
+console.log('Synced public files. Update catalog and screenshot, commit/push master, then run deploy.');

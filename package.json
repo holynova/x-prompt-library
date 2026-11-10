@@ -6,8 +6,9 @@
   "scripts": {
     "dev": "python3 -m http.server 4312 --bind 127.0.0.1 --directory public",
     "check": "node scripts/check.mjs",
-    "deploy:check": "npm run check && wrangler deploy --dry-run --config wrangler.jsonc",
-    "deploy": "npm run check && wrangler deploy --config wrangler.jsonc"
+    "deploy:check": "npm run check && node scripts/deploy.mjs --dry-run",
+    "deploy": "npm run check && node scripts/deploy.mjs",
+    "sync:portfolio": "node scripts/sync-portfolio.mjs"
   },
   "devDependencies": {
     "wrangler": "4.128.0"

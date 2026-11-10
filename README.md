@@ -8,7 +8,7 @@ English: A static library of 71 AI prompts in 27 collections, with original text
 
 ## 在线体验 / Live Demo
 
-- [Cloudflare Demo](https://x-prompt-library.xiaosang.cc/)
+- [Cloudflare Demo](https://xiaosang.cc/x-prompt-library/)
 - [GitHub Repo](https://github.com/holynova/x-prompt-library)
 
 <img src="./assets/qr.png" width="180" alt="扫码访问 Prompt 收藏册">
@@ -26,12 +26,14 @@ Open http://localhost:4312/ . The self-contained `public/index.html` can also be
 
 ```bash
 npm run check
-npm run deploy:check
-npm run deploy
+npm run sync:portfolio -- /path/to/portfolio
+# Commit and push the updated catalog + x-prompt-library/ on portfolio master.
+npm run deploy:check -- /path/to/portfolio
+npm run deploy -- /path/to/portfolio
 ```
 
-Cloudflare Workers Static Assets · Custom Domain: `x-prompt-library.xiaosang.cc`.
+Cloudflare Workers Static Assets · `xiaosang-portfolio` · `xiaosang.cc/x-prompt-library/`.
 
-源码与配置统一维护在 `main`；从同一提交在本地手动部署，不使用 Cloudflare 自动部署工作流。
+项目源码维护在 `main`；静态文件同步到作品集 `master` 的 `x-prompt-library/`，复用现有 Worker 手动部署。发布前核对工作区干净、分支及文件一致性。
 
-Source and deployment configuration share `main`; deploy manually from the same commit. Prompt text remains attributed to its original authors. The collection was checked on 2026-11-08; model names and historical troubleshooting instructions retain their original context.
+Project source stays on `main`; the portfolio hosts matching static files on `master` under the existing Worker. Commit and push both before deploying; the script checks clean branches and matching files. Prompt text remains attributed to its original authors. The collection was checked on 2026-11-08; model names and historical troubleshooting instructions retain their original context.

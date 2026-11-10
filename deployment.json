@@ -1,0 +1,10 @@
+{
+  "type": "shared-worker-static-subpath",
+  "worker": "xiaosang-portfolio",
+  "url": "https://xiaosang.cc/x-prompt-library/",
+  "sourceBranch": "main",
+  "portfolioRepository": "https://github.com/holynova/holynova.github.io",
+  "portfolioBranch": "master",
+  "portfolioPath": "x-prompt-library",
+  "portfolioConfig": "wrangler.jsonc"
+}
