@@ -1,6 +1,6 @@
 {
   "name": "x-prompt-library",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "private": true,
   "description": "A bilingual prompt library with 27 collections and 71 reusable prompts.",
   "scripts": {

@@ -11,5 +11,6 @@ const scripts=[...html.matchAll(/<script(?![^>]*type="application\/json")([^>]*)
 for(const m of scripts)if(!m[1].includes('src='))new vm.Script(m[2]);
 assert(html.includes('https://github.com/holynova/x-prompt-library'));
 assert.equal((html.match(/data-website-id=/g)||[]).length,1);
-assert(html.includes('v1.0.0'));
+const pkg=JSON.parse(readFileSync(new URL('../package.json',import.meta.url),'utf8'));
+assert(html.includes('v'+pkg.version));
 console.log('Validated 27 groups, 71 prompts, 28 translations, JavaScript, version, Repo and analytics.');
