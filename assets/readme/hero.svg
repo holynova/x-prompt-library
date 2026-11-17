@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="1200" height="360" viewBox="0 0 1200 360"
+     role="img" aria-labelledby="title desc">
+  <title id="title">Prompt 收藏册 — 27 组、71 条 AI 提示词，原文与中文对照</title>
+  <desc id="desc">纸面编辑风标题：Prompt 收藏册，副标题 27 组、71 条 AI 提示词；右侧是两张叠放的提示词卡片，英文与中文左右对照，配复制按钮。</desc>
+
+  <rect width="1200" height="360" rx="26" fill="#faf9f7"/>
+
+  <g id="title-block" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif">
+    <text x="56" y="62" font-size="19" letter-spacing="3" fill="#a03d2d">PROMPT LIBRARY · X 上的好提示词收藏册</text>
+    <text x="56" y="128" font-size="62" font-weight="700" fill="#1a1a17">Prompt 收藏册</text>
+    <text x="56" y="168" font-size="23" fill="#1a1a17">27 组、71 条 AI 提示词，原文与中文对照</text>
+    <text x="56" y="204" font-size="19" fill="#66665e">每条保留原文与出处，点复制，粘贴到 AI 聊天框就能用。</text>
+    <g id="chips" font-size="18" fill="#1a1a17" text-anchor="middle">
+      <g><rect x="56" y="238" width="100" height="36" rx="18" fill="#ffffff" stroke="#e5e2dc" stroke-width="1.5"/><text x="106" y="262">27 组</text></g>
+      <g><rect x="168" y="238" width="140" height="36" rx="18" fill="#ffffff" stroke="#e5e2dc" stroke-width="1.5"/><text x="238" y="262">71 条提示词</text></g>
+      <g><rect x="320" y="238" width="154" height="36" rx="18" fill="#ffffff" stroke="#e5e2dc" stroke-width="1.5"/><text x="397" y="262">28 份中文译文</text></g>
+      <g><rect x="486" y="238" width="140" height="36" rx="18" fill="#ffffff" stroke="#e5e2dc" stroke-width="1.5"/><text x="556" y="262">25 位原作者</text></g>
+    </g>
+  </g>
+
+  <g id="cards">
+    <g id="back-card" transform="rotate(4 980 180)">
+      <rect x="830" y="66" width="300" height="224" rx="12" fill="#ffffff" stroke="#e5e2dc" stroke-width="1.5"/>
+      <g fill="#e5e2dc">
+        <rect x="854" y="94" width="252" height="10" rx="5"/>
+        <rect x="854" y="116" width="220" height="10" rx="5"/>
+        <rect x="854" y="138" width="252" height="10" rx="5"/>
+        <rect x="854" y="160" width="180" height="10" rx="5"/>
+      </g>
+    </g>
+    <g id="front-card">
+      <rect x="796" y="46" width="300" height="224" rx="12" fill="#ffffff" stroke="#d8d4cc" stroke-width="1.5"/>
+      <g id="p-mark" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="18" font-weight="700" fill="#ffffff" text-anchor="middle">
+        <rect x="816" y="66" width="30" height="30" rx="4" fill="#a03d2d"/>
+        <text x="831" y="88">P</text>
+      </g>
+      <line x1="946" y1="66" x2="946" y2="250" stroke="#e5e2dc" stroke-width="1.5"/>
+      <g fill="#d8d4cc">
+        <rect x="816" y="116" width="110" height="9" rx="4.5"/>
+        <rect x="816" y="136" width="110" height="9" rx="4.5"/>
+        <rect x="816" y="156" width="88" height="9" rx="4.5"/>
+        <rect x="816" y="176" width="110" height="9" rx="4.5"/>
+        <rect x="816" y="196" width="96" height="9" rx="4.5"/>
+      </g>
+      <g fill="#e5e2dc">
+        <rect x="966" y="116" width="110" height="9" rx="4.5"/>
+        <rect x="966" y="136" width="110" height="9" rx="4.5"/>
+        <rect x="966" y="156" width="88" height="9" rx="4.5"/>
+        <rect x="966" y="176" width="110" height="9" rx="4.5"/>
+        <rect x="966" y="196" width="96" height="9" rx="4.5"/>
+      </g>
+      <g id="copy-pill" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="16" fill="#1a1a17" text-anchor="middle">
+        <rect x="996" y="222" width="80" height="30" rx="15" fill="#faf9f7" stroke="#d8d4cc" stroke-width="1.5"/>
+        <text x="1036" y="243">复制</text>
+      </g>
+    </g>
+  </g>
+</svg>
