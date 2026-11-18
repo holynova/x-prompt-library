@@ -1,18 +1,18 @@
+<p align="right"><a href="README.en.md">English</a></p>
+
 <p align="center">
   <img src="./assets/readme/hero.svg" width="100%" alt="Prompt 收藏册 — 27 组、71 条 AI 提示词，原文与中文对照：右侧是两张叠放的提示词卡片，英文与中文左右对照，配复制按钮">
 </p>
 
 <p align="center">
-  <a href="https://xiaosang.cc/x-prompt-library/">▶ 在线浏览 Browse Online</a>
+  <a href="https://xiaosang.cc/x-prompt-library/">▶ 在线浏览</a>
   ·
   <a href="https://github.com/holynova/x-prompt-library">GitHub 仓库</a>
 </p>
 
 Prompt 收藏册收录了 27 组、71 条实用的 AI 提示词，全部来自 X 上原作者的公开分享：界面设计、品牌、代码审查、Agent 工作流、图像视频、学习研究。每条保留原文与出处链接，28 条附中文译文；支持分类筛选、全文搜索、原文/译文对照及逐条独立复制。纯静态单页，无需后端。
 
-Prompt Library is a collection of 71 practical AI prompts in 27 groups, all sourced from public posts on X: interface design, branding, code review, agent workflows, image & video, learning and research. Every prompt keeps its original text and source link; 28 include a Chinese translation. Browse by category, search the full text, compare original vs. translation, and copy each version independently. A purely static single page — no backend.
-
-## 截图 / Screenshots
+## 截图
 
 <p align="center">
   <img src="./assets/readme/screenshot-main.png" width="100%" alt="首页：左侧是 27 组提示词目录，右侧是极简产品与界面组的中文提示词与复制按钮">
@@ -22,7 +22,7 @@ Prompt Library is a collection of 71 practical AI prompts in 27 groups, all sour
   <img src="./assets/readme/screenshot-bilingual.png" width="100%" alt="中英对照：品牌与 Logo 组的提示词，英文与中文左右并排，各带独立复制按钮">
 </p>
 
-## 内容 / Content
+## 内容
 
 27 组、71 条、28 份译文（数量由 `scripts/check.mjs` 断言校验）：
 
@@ -37,14 +37,14 @@ Prompt Library is a collection of 71 practical AI prompts in 27 groups, all sour
 
 共 25 位原作者；每组都标注作者与 X 原帖链接，提示词文字归原作者所有。本收藏册于 2026-11-08 核对；模型名称与历史排障说明保留原始语境。
 
-## 功能 / Features
+## 功能
 
 - **中英对照**：原文与译文左右并排，可切「对照 / 原文 / 中文」三种视图；英文与中文各有独立的复制按钮。
 - **搜索与筛选**：全文搜索（按 `/` 聚焦搜索框）+ 按分类筛选；左侧目录点选切换组，组间可上下翻页。
 - **逐条复制**：每条提示词独立复制；剪贴板权限受限时有手动复制兜底。
 - **离线可用**：数据以 JSON 内嵌在单页里，`public/index.html` 直接打开就能离线浏览。
 
-## 本地运行 / Run Locally
+## 本地运行
 
 ```bash
 npm run dev     # python3 -m http.server 4312 --directory public
@@ -57,7 +57,7 @@ npm run dev     # python3 -m http.server 4312 --directory public
 npm run check   # node scripts/check.mjs
 ```
 
-## 技术 / Tech
+## 技术
 
 - 纯静态单页：`public/index.html` 一个文件包含样式、逻辑与全部数据（`<script id="library-data" type="application/json">` 内嵌 27 组数据），零构建、零依赖。
 - 数据校验：`scripts/check.mjs` 断言 27 组 / 71 条 / 28 份译文、组 ID 唯一、每组都有 `https://x.com/` 出处链接、非中文提示词都有译文，并做 JS 语法检查与版本号一致性检查。
@@ -69,12 +69,3 @@ scripts/deploy.mjs      发布脚本（仅供维护者使用）
 scripts/sync-portfolio.mjs  同步脚本（仅供维护者使用）
 assets/                 旧截图与二维码（保留）
 ```
-
-## English
-
-**Prompt Library** collects 71 practical AI prompts in 27 groups from public posts on X — interface design, branding, code review, agent workflows, image & video, learning and research.
-
-- **Content** (asserted by `scripts/check.mjs`): 27 groups, 71 prompts, 28 Chinese translations, 25 original authors. Categories: image & video (9 groups), personal workflow & agents (6), interface & brand design (5), code quality (3), learning & research (2), device & historical troubleshooting (2). Every group links to its source post on X; prompt text remains attributed to its original authors.
-- **Features**: side-by-side original/translation view (compare / original / Chinese modes), independent copy buttons per language, full-text search (`/` to focus) and category filters, manual-copy fallback when clipboard access is blocked.
-- **Run it**: `npm run dev` (serves `public/` on port 4312), or open `public/index.html` directly — it works offline. `npm run check` validates counts, links, and version.
-- **Tech**: a single static HTML file with all data embedded as JSON; zero build, zero dependencies.
